@@ -23,8 +23,7 @@ function ForecastList(props) {
 
     return (
       <div key={i} onClick={props.handleClick.bind(null, data)} style={styles.forecast}>
-        <p>{data.weather[0].description}</p>
-        <p>{dateHelpers(date)}</p>
+        <div>{dateHelpers(date)}</div>
         <img src={imgSrc} alt='Weather Icon'/>
       </div>
     );

@@ -16,7 +16,7 @@ function Detail(props) {
   return (
     <div style={styles.container}>
       <h3>{props.city}</h3>
-      <p>{dateHelpers(date)}</p>
+      <div>{dateHelpers(date)}</div>
       <img src={imgSrc} alt='Weather Icon'/>
       <p>{forecast.weather[0].description.charAt(0).toUpperCase() + forecast.weather[0].description.slice(1)}</p>
       <p>Max: {parseInt((forecast.temp.max * 1.8) - 459.67)} ºF</p>

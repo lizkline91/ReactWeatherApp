@@ -1,3 +1,5 @@
+var React = require('react');
+
 var days = {
   "0":"Sunday",
   "1":"Monday",
@@ -24,5 +26,10 @@ var months = {
 };
 
 module.exports = function(date) {
-  return months[date.getMonth()] + ' ' + date.getDate() +  ', ' + days[date.getDay()];
-}
+  return (
+    <div>
+      <h3>{days[date.getDay()]}</h3>
+      <h4>{months[date.getMonth()]} {date.getDate()}</h4>
+    </div>
+  )
+};
