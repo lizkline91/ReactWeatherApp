@@ -12,6 +12,10 @@ var styles = {
     borderRadius: '20px',
     width: '250px',
     display: 'inline-block'
+  },
+  img: {
+    height:'70px',
+    width:'70px',
   }
 }
 
@@ -24,7 +28,7 @@ function ForecastList(props) {
     return (
       <div key={i} onClick={props.handleClick.bind(null, data)} style={styles.forecast}>
         <div>{dateHelpers(date)}</div>
-        <img src={imgSrc} alt='Weather Icon'/>
+        <img style={styles.img} src={imgSrc} alt='Weather Icon'/>
       </div>
     );
   });
